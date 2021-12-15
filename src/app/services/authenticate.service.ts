@@ -9,7 +9,7 @@ interface UserResponse {
   providedIn: 'root'
 })
 export class AuthenticationService {
-  baseUrl = "http://localhost:8080/";
+  baseUrl = "https://springboot-trade.azurewebsites.net/";
   url = "";
   constructor(private http: HttpClient) { }
 

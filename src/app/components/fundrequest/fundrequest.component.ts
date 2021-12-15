@@ -31,7 +31,7 @@ export class FundrequestComponent implements OnInit {
     this.admin = this.getDataservice.getPendingFunds()
   }
 
-  approvefund(sno: number,email:string) {
+  approvefund(sno: number) {
 
     this.getDataservice.approveFund(sno).subscribe(data =>
       {
