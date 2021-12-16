@@ -127,7 +127,7 @@ import { HashLocationStrategy,LocationStrategy } from '@angular/common';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '1012436284466-ajo9drrsn2jj2pul0il8u31ul7ck8i49.apps.googleusercontent.com' // add web app client id
+              '1012436284466-qe0qrs44uqn9epe0edbbtcrcbbaksnm6.apps.googleusercontent.com' // add web app client id
             )
           }
         ]
