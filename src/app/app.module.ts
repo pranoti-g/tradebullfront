@@ -45,6 +45,7 @@ import { TopheadingComponent } from './components/topheading/topheading.componen
 import { AdminOrderComponent } from './components/admin-order/admin-order.component';
 import { UserOrderComponent } from './components/user-order/user-order.component';
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
+import { HashLocationStrategy,LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -132,6 +133,7 @@ import { AdminProfileComponent } from './components/admin-profile/admin-profile.
         ]
       } as SocialAuthServiceConfig
     },
+    {provide:LocationStrategy,useClass:HashLocationStrategy},
     ThemeService],
   bootstrap: [AppComponent]
 })
