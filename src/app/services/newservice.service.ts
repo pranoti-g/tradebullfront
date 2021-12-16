@@ -11,7 +11,7 @@ export class NewserviceService {
 
   //news api url 
 
-  newsApiuUrl = "https://newsapi.org/v2/top-headlines?country=in&apiKey=6aa9d8da42824bbbaffae605ce0b6bfb";
+  newsApiuUrl = "https://saurav.tech/NewsAPI/top-headlines/category/business/in.json";
 
   //topheading
   topHeading():Observable<any>
