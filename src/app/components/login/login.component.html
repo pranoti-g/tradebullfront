@@ -14,7 +14,7 @@
               <div *ngIf="invalidLogin" class="text-danger">
                 {{ errorMessage }}
               </div>
-              <label>User Name</label>
+              <label>User Email</label>
               <input type="email" required class="form-control" name="mailid" [(ngModel)]="mailid" #mail="ngModel"
                 minlength="3" email  email placeholder="UserName..."/>
 
