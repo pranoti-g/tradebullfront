@@ -150,4 +150,6 @@ button{
         margin-right:80px;
         margin-top:-40px;
     }
-    
+    .back{
+        text-align: left;
+    }
