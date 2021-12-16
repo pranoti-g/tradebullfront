@@ -89,7 +89,7 @@ export class SellComponent implements OnInit {
   }
   checkQuantity(qty,availableQty)
   {
-    if(isNaN(Number(qty.value)) || Number(qty.value) === 0 || Number(qty.value) > availableQty)
+    if(isNaN(Number(qty.value))|| Number(qty.value) <= 0 || Number(qty.value) === 0 || Number(qty.value) > availableQty)
       return false;
     else
       return true;
