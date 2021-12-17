@@ -34,6 +34,11 @@ export class GetDataService {
     this.url = this.baseUrl + "history?email=" + email;
     return this.http.get(this.url);
   }
+  
+   pendingHistoryUser(email):Observable<any> {
+    this.url = this.baseUrl + "pendingHistoryUser?email=" + email;
+    return this.http.get(this.url); 
+  }
 
   getAdminHistory():Observable<any>{
     this.url = this.baseUrl+"adminHistory";
