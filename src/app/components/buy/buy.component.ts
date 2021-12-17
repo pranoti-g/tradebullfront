@@ -83,7 +83,7 @@ export class BuyComponent implements OnInit {
   checkQuantity(qty)
   {
     
-    if(isNaN(Number(qty.value))|| Number(qty.value) <= 0  || Number(qty.value) === 0 ||Number(this.companyDetails.volume) <1 )
+    if(isNaN(Number(qty.value)) || Number(qty.value) === 0 ||Number(this.companyDetails.volume) <1 )
       return false;
     else if(Number(qty.value) <= Number(this.companyDetails.volume))
       return true;
@@ -95,7 +95,7 @@ export class BuyComponent implements OnInit {
     
   }
 brokrage(){
-   this.getDataservice.getAdminHistory().subscribe(
+   this.getDataservice.pendingHistoryUser( localStorage.getItem('username')).subscribe(
     data =>{
      this.history = data;
     console.log(this.history);
