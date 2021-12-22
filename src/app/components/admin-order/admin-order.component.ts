@@ -41,7 +41,7 @@ export class AdminOrderComponent implements OnInit {
           this.reloadData();
         }
         else if (data.status == "insufficient balance")
-          this.toastr.error("", 'Insufficient balance in your account', { positionClass: "toast-bottom-center" });
+          this.toastr.error("", 'User Doesn'+"'"+'t Have Sufficient Balance', { positionClass: "toast-bottom-center" });
       },
     );
   }

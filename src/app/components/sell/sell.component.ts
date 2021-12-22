@@ -63,7 +63,7 @@ export class SellComponent implements OnInit {
       data => {this.brokrage();
         if(data.status === "Pending"){
           alert("Your sell request is pending");
-          this.router.navigate(['userOrder'])
+          this.router.navigate(['userOrder']);
     }
   },
     error => {
