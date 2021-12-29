@@ -7,7 +7,7 @@
             <br><br>
             <br>
             
-    <button type="submit" class="fas fa-arrow-alt-circle-left" (click)="goToAdmin()" style="border-radius: 10px; border-color: green; background-color: blanchedalmond;"></button>
+             <button type="submit" class="fas fa-arrow-alt-circle-left" (click)="goToAdmin()" style="border-radius: 10px; border-color: green; background-color: blanchedalmond;"></button>
             <div class="container emp-profile" style="background: linear-gradient(#bdc3c7,#2c3e50);border-radius: 20px;">
                 <form method="post">
                     <div *ngIf="userDetails" class="row">
@@ -91,10 +91,35 @@
             </div>
         </div>
        
-      <div class="col-md-6" style="margin-top: 90px;" >
-<img src="https://i.pinimg.com/originals/06/66/35/066635d69061c3ee8ebd21405e0a2d93.png" style="height: 95%; width: 100%; border-radius: 20px;">
-      </div>
- 
+        <div *ngIf="admin"  id="" class="col-6">
+            <h6 style="margin-left: 200px; font-family: Cursive; font-size: 30px;  text-shadow: 2px 2px red;margin-top: 0;">Brokerage Details</h6>
+         <div class="my-custom-scrollbar">
+            <table class="table table-borderles">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">TicketNo</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Date Time</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let elements of admin | async "  style="height: 2%;">
+
+                        <td data-label="Ticket No">{{elements.sno}}</td>
+                        <td data-label="Amount">{{elements.amount}}</td>
+                        <td data-label="Date">{{elements.dateTime }}</td>
+                        <td data-label="Type">{{elements.type | uppercase}} </td>
+                        <td data-label="Status" [ngStyle]="{'color': getColor(elements.status)}" >{{elements.userid }}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+        <p *ngIf="!admin" class="noData">
+            Nothing available
+        </p>
     <app-footer></app-footer>
   </div>
 </div>
