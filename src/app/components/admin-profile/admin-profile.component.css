@@ -105,6 +105,73 @@ body{
      margin-top: 80px;
      
  }
+
+ 
+#table-wrapper {
+    position:relative;
+  }
+  .my-custom-scrollbar {
+    height:300px;
+    width: 600px;
+    overflow:auto;  
+    margin-top:30px;
+    position: relative;      
+  }
+  #table-wrapper table {
+    width:100%;
+  
+  }
+  #table-wrapper table * {
+    background:yellow;
+    color:black;
+  }
+   
+  tr{
+    background-color: rgb(226, 224, 224);
+    color: black;
+    font-weight: bold;
+}
+
+@media(max-width: 769px){
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 90%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position:absolute;
+        left: 0%;
+        width: 30%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+        color: rgb(219, 30, 30);
+        font-style: oblique;
+        font-family: sans-serif;
+    }
+    .table tbody tr td .btn{
+       width: 140px;
+        text-decoration: none;
+        line-height: 20px;
+        display: inline-block;
+        text-align: center;
+        left:40px;
+        
+    }
+}
  
  
  
