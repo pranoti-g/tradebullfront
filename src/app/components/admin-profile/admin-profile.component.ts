@@ -41,7 +41,7 @@ export class AdminProfileComponent implements OnInit {
   }
   
     loadData() {
-      this.admin = this.getDataservice.getAllRequest(localStorage.getItem('username'));
+      this.admin = this.getDataservice.getAllRequest("abc@atyeti.com");
     }
     switchTo(){
       this.switchToPage=true;
@@ -87,5 +87,16 @@ export class AdminProfileComponent implements OnInit {
               console.log(error)
           }
         )
+    }
+
+    getColor(color) {
+      switch (color) {
+        case 'Success':
+          return 'green';
+        case 'pending':
+          return 'rgb(218, 161, 6)';
+        case 'rejected':
+          return 'red';
+      }
     }
 }
